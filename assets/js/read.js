@@ -24,8 +24,8 @@
  *
  * Here's the documentation you need:
  * https://datatables.net/
- * https://datatables.net/extensions/buttons/examples/
- * https://datatables.net/extensions/colreorder/examples/
+   * https://datatables.net/extensions/buttons/examples/
+ * https: //datatables.net/extensions/colreorder/examples/
  * https://datatables.net/examples/basic_init/scroll_x.html
  *
  */
@@ -35,7 +35,18 @@
    $(function(){
 
    	//code goes here
+         $('#builderTable').DataTable({
 
-   })
+            "paging":   false, //just to check page numbers option I made it false
+            "info":     false, // since data is too less I removed this option which displays the info about results at the bottom of tale
+            colReorder: true,
+            "scrollX": true,
+            dom: 'Bfrtip',
+            buttons: [
+               'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+         });
+
+   });
 
  })();

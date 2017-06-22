@@ -1,5 +1,16 @@
+.navbar {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, orange 95%  );
+  font-size: 15px;
+  height: 60px;
+}
+
+
 body {
     padding-top: 70px;
+    height: 1024px;
+    background: linear-gradient(to bottom right,rgba(0,0,0,0) 5%, green 45%, orange);
+    background-repeat: no-repeat;
+
 }
 /* Customize container */
 @media (min-width: 600px) {
@@ -12,4 +23,10 @@ body {
     .container-fluid {
         max-width: 1024px;
     }
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc:after {
+    content: normal;
 }

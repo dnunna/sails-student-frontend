@@ -1,52 +1,53 @@
 <ol class="breadcrumb">
     <li><a href="/">Home</a></li>
-    <li class="active">Add Student</a></li>
+    <li class="active">Add Builder</a></li>
 </ol>
 
 <br/>
 <%- partial ('partials/statusmessage.ejs') %>
 
-<h2>Add Student</h2>
-<form action="/create" method="POST" class="form-horizontal" id="addStudentForm">
+<h2>Add Builder</h2>
+<form action="/create" method="POST" class="form-horizontal" id="addBuilderForm">
+  <!--<input type="hidden" name="id">-->
   <div class="form-group">
-    <label for="first_name" class="col-sm-2 control-label">First Name</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required>
+    <label for="company_name" class="col-sm-2 control-label">Company Name</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="company_name" name="company_name" placeholder="Company Name">
     </div>
   </div>
   <div class="form-group">
-    <label for="last_name" class="col-sm-2 control-label">Last Name</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="last_name" name="last_name"  placeholder="Last Name" required>
+    <label for="contact_first_name" class="col-sm-2 control-label">First Name</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="contact_first_name" name="contact_first_name" placeholder="First Name">
     </div>
   </div>
   <div class="form-group">
-    <label for="start_date" class="col-sm-2 control-label">Email Address</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="start_date" name="start_date" placeholder="2017-01-01" required>
+    <label for="contact_last_name" class="col-sm-2 control-label">Last Name</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="contact_last_name" name="contact_last_name"  placeholder="Last Name">
     </div>
   </div>
   <div class="form-group">
-    <label for="gpa" class="col-sm-2 control-label">GPA</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="gpa" name="gpa" placeholder="4.0">
+    <label for="contact_phone_number" class="col-sm-2 control-label">Phone Number</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="contact_phone_number" name="contact_phone_number" placeholder="603-002-0001" >
     </div>
   </div>
   <div class="form-group">
-    <label for="sat" class="col-sm-2 control-label">SAT Score</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="sat" name="sat" placeholder="1400">
+    <label for="email_address" class="col-sm-2 control-label">EMAIL</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="email_address" name="email_address" placeholder="abc@yahoo.com">
     </div>
   </div>
   <div class="form-group">
-    <label for="major_id" class="col-sm-2 control-label">Major ID</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="major_id" name="major_id">
+    <label for="zip_code" class="col-sm-2 control-label">ZIP code</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="zip_code" name="zip_code" placeholder="03801">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Add Student</button>
+      <button type="submit" class="btn btn-default">Add Builder</button>
     </div>
   </div>
 </form>

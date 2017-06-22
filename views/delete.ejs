@@ -1,32 +1,33 @@
 <ol class="breadcrumb">
     <li><a href="/">Home</a></li>
-    <li class="active">Delete Employee</a></li>
+    <li class="active">Delete Builder</a></li>
+      <!--the above line displays as Home/Delete Builder UI when I click on Delete Builder -->
 </ol>
 
 <br/>
 
 <%- partial ('partials/statusmessage.ejs') %>
 
-<h2>Delete Student</h2>
+<h2>Delete Builder</h2>
 
+<!--this sectionis for the dropdown values of homebuilder contact-->
 <div style="text-align: center; padding-top:50px">
-  <form action="/delete" method="POST">
+  <form id="delform" action="/delete" method="POST">
     <div class="form-group">
-      <label for="student_id">SELECT A STUDENT TO DELETE</label><br/>
-      <select id="student_id" name="student_id">
-      <% if(typeof students != "undefined" && students.length > 0){ %>
-        <% students.forEach(function(student){ %>
-          <option value="<%= student.student_id %>">
-            <%= student.last_name + ", " +  student.first_name %>
+      <label for="builder_id">SELECT A BUILDER CONTACT TO DELETE</label><br/>
+      <select id="builder_id" title="choose a name.." name="builder_id" data-header="Select a name" data-live-search="true"><!-- data-live-search is used for searching-->
+      <% if(typeof builders != "undefined" && builders.length > 0){ %>
+        <% builders.forEach(function(builder){ %>
+          <option value="<%= builder.builder_id %>">
+            <%= builder.contact_last_name + ", " +  builder.contact_first_name %>
           </option>
         <% }) %>
       <% } %>
       </select>
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-danger">
-        DELETE STUDENT
-        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      <button type="submit" class="btn btn-delete">
+        Delete Builder
       </button>
     </div>
   </form>

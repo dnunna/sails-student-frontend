@@ -6,30 +6,30 @@
 
 <%- partial ('partials/statusmessage.ejs') %>
 
-<h2>Students</h2>
-<table class="table table-striped table-bordered" id="employeeTable" style="width:100%">
+<!-- defining the table structure to display on UI-->
+
+<h2>Builders</h2>
+<table class="table table-striped table-bordered" id="builderTable" style="width:100%">
   <thead>
     <tr>
-      <th>ID</th>
+      <th>Company Name</th>
       <th>First Name</th>
       <th>Last Name</th>
-      <th>Start Date</th>
-      <th>GPA</th>
-      <th>SAT Score</th>
-      <th>Major ID</th>
+      <th>Phone Number</th>
+      <th>Email Address</th>
+      <th>Zip Code</th>
     </tr>
   </thead>
   <tbody>
-  <% if(typeof students != "undefined" && students.length > 0){ %>
-    <% students.forEach(function(student){ %>
+  <% if(typeof builders != "undefined" && builders.length > 0){ %>
+    <% builders.forEach(function(builder){ %>
       <tr>
-        <td><%= student.student_id %></td>
-        <td><%= student.first_name %></td>
-        <td><%= student.last_name %></td>
-        <td><%= student.start_date %></td>
-        <td><%= student.gpa %></td>
-        <td><%= student.sat %></td>
-        <td><%= student.major_id %></td>
+        <td><%= builder.company_name%></td>
+        <td><%= builder.contact_first_name %></td>
+        <td><%= builder.contact_last_name %></td>
+        <td><%= builder.contact_phone_number %></td>
+        <td><%= builder.email_address %></td>
+        <td><%= builder.zip_code %></td>
       </tr>
     <% }) %>
   <% } %>
